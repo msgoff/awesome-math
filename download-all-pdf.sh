@@ -18,8 +18,6 @@ do
     if [ ! -f "pdf/${f##*/}" ]; then
         wget --tries=3 \
             --timeout=5 \
-            --waitretry=1 \
-            --retry-connrefused \
             "$f" -P pdf
     fi
 done
